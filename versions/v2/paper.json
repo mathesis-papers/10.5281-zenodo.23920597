@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 89479,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5"
+    },
+    "source": {
+      "bytes": 17687,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "MathOverflow 513954, revision 2 has affirmative answers: we give a self-contained proof of the inertia formula previously proved by user1551, and prove the continuous-family assertion. For any real symmetric A and nonzero Delta=x^T A x, the matrix A-(Ax)(Ax)^T/Delta loses one eigenvalue of the pivot sign and gains one zero eigenvalue, with kernel ker A direct-sum span{x}. For continuous diagonal families with a positive-semidefinite modification, connectedness fixes the pivot sign and, in the negative branch, one negative coordinate. The conclusions extend to countably punctured simplices, and a block congruence removes any nondegenerate subspace. For the linked sphere question, the increasing odd polynomial h(t)=(3t-t^3)/2 has squared ratio infimum 16(17-9sqrt(3))/23 over all dimensions, strictly below the two-coordinate infimum 80/81.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23920597",
+    "current_version": 2,
+    "doi": "10.5281/zenodo.23920598",
+    "lean_source": {
+      "revision": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/0f1f822c673c1903dc6b0a209a23dacebca2aa6c/D5/S3/QuadraticForms/StructuredRankOneFamily.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/mathoverflow-513954-singular-diagonal-downdate-inertia/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:35.225392763Z",
+    "record": "mathoverflow-513954-singular-diagonal-downdate-inertia",
+    "repository_name": "6aec3857f36f82c2025c5d3f",
+    "source": {
+      "url": "/api/v1/collected-papers/mathoverflow-513954-singular-diagonal-downdate-inertia/files/source?version=2"
+    },
+    "title": "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:35.225392763Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "mathoverflow-513954-singular-diagonal-downdate-inertia"
+  }
+}

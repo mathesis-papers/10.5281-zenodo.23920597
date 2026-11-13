@@ -1,0 +1,479 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,tabularx,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\In}{\operatorname{In}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\title{MathOverflow 513954, revision 2:\\
+singular signed downdates, fixed coordinates,\\
+and a sharp polynomial sphere bound}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{November 2, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+MathOverflow 513954, revision 2~\cite{lucid} has affirmative answers:
+we give a self-contained proof of the inertia formula previously proved
+by user1551~\cite{user1551}, and prove the continuous-family assertion.
+For any real symmetric matrix $A$, singular or otherwise, and
+$\Delta=x^{\mathsf T}Ax\ne0$, the matrix
+$M=A-(Ax)(Ax)^{\mathsf T}/\Delta$ has its positive index decreased by one
+when $\Delta>0$, or its negative index decreased by one when $\Delta<0$;
+the other nonzero index is unchanged, and the nullity increases by one.
+Its kernel is $\ker A\oplus\Span\{x\}$.
+For continuous diagonal families with $M\succeq0$ on a nonempty connected
+space, $\Delta$ has constant sign; if negative, a unique diagonal coordinate
+is negative everywhere and all other coordinates are nonnegative.
+The conclusions extend to countably punctured simplices, and a block
+congruence removes any nondegenerate subspace. For the linked sphere
+question~\cite{otherquestion}, the increasing odd polynomial
+$h(t)=(3t-t^3)/2$ has squared ratio infimum
+$16(17-9\sqrt3)/23$ over all dimensions, strictly below the
+two-coordinate infimum $80/81$.
+\end{abstract}
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+\normalsize
+
+\section{The inertia question}
+Lucid's question~\cite{lucid}, revision 2 (August 5, 2026), considers
+$D=\diag(d_1,\ldots,d_n)$, $w=Dx$ and $M=D-ww^{\mathsf T}/\Delta$,
+where $\Delta=x^{\mathsf T}Dx\ne0$.
+We use \emph{signed downdate} for this two-sign formula: with
+$u=Dx/\sqrt{|\Delta|}$ it is $D-uu^{\mathsf T}$ when $\Delta>0$ and
+$D+uu^{\mathsf T}$ when $\Delta<0$, a rank-one update in the latter case.
+Both the inertia formula and the related continuous-family assertion have
+affirmative answers. On Lucid's Mathematics Stack Exchange cross-post,
+user1551 gave a proof of the matrix inertia formula on August 7,
+2026~\cite{user1551}; its zero count follows by subtracting the positive
+and negative counts from the dimension. We credit that earlier proof and
+give a self-contained completion of Lucid's proposed hyperplane argument,
+together with the continuous-family proof.
+The proposed decomposition in the question already
+contains the matrix argument: an invertible change of basis is required,
+but invertibility of $D$ is not. We give the argument for arbitrary real
+symmetric $A$ and then prove the fixed-index assertion separately.
+
+For a real symmetric matrix $B$, write
+$\In(B)=(n_+(B),n_-(B),n_0(B))$ for the positive, negative and zero
+eigenvalue counts, including multiplicity.
+Congruence preserves these counts even for a degenerate form.
+Indeed, by the spectral theorem, $n_+(B)$ is the largest dimension of a
+subspace on which $v^{\mathsf T}Bv$ is positive definite: the positive
+eigenspace attains it, and any larger subspace intersects the nonpositive
+eigenspace. An invertible substitution preserves this largest dimension.
+Apply the same argument to $-B$ for $n_-$, and use
+$n_0=n-n_+-n_-$ for the remaining count. This is Sylvester's law of inertia
+in precisely the form needed below.
+
+\begin{theorem}\label{thm:matrix}
+Let $A\in\R^{n\times n}$ be symmetric and $x\in\R^n$ satisfy
+$\Delta=x^{\mathsf T}Ax\ne0$. Put $w=Ax$ and
+$M=A-ww^{\mathsf T}/\Delta$. Then
+\begin{equation}\label{eq:inertia}
+\In(M)=
+\begin{cases}
+(n_+(A)-1,\ n_-(A),\ n_0(A)+1),&\Delta>0,\\
+(n_+(A),\ n_-(A)-1,\ n_0(A)+1),&\Delta<0.
+\end{cases}
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:kernel}
+\ker M=\ker A\oplus\Span\{x\},\qquad \rank M=\rank A-1.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The nonzero pivot implies $w\ne0$ and $x\ne0$. Let
+$H=\{z\in\R^n:w^{\mathsf T}z=0\}$. Every $v$ has the unique decomposition
+\[
+v=\left(v-\frac{w^{\mathsf T}v}{\Delta}x\right)
+  +\frac{w^{\mathsf T}v}{\Delta}x\in H\oplus\Span\{x\}.
+\]
+Choose a basis matrix $Z$ for $H$ and put $P=[Z\ \ x]$.
+Thus $P$ is invertible, including when $A$ is singular.
+Symmetry gives $Z^{\mathsf T}Ax=Z^{\mathsf T}w=0$, and $Mx=0$.
+With $C=Z^{\mathsf T}AZ$ we therefore have
+\begin{equation}\label{eq:blocks}
+P^{\mathsf T}AP=\begin{pmatrix}C&0\\0&\Delta\end{pmatrix},
+\qquad
+P^{\mathsf T}MP=\begin{pmatrix}C&0\\0&0\end{pmatrix}.
+\end{equation}
+Congruence and direct-sum additivity give
+$\In(A)=\In(C)+\In([\Delta])$ and
+$\In(M)=\In(C)+(0,0,1)$, proving~\eqref{eq:inertia}.
+In particular the subtracted positive or negative count is at least one.
+
+For the kernel statement, if $Av=0$ then
+$w^{\mathsf T}v=x^{\mathsf T}Av=0$, so $Mv=0$.
+Conversely, $Mv=0$ implies
+$A(v-tx)=0$ with $t=w^{\mathsf T}v/\Delta$.
+Together with $Mx=0$ this gives the sum in~\eqref{eq:kernel}.
+If $tx\in\ker A$, then $t\Delta=x^{\mathsf T}A(tx)=0$, hence $t=0$;
+the sum is direct. Rank-nullity gives the rank identity.
+\end{proof}
+
+For example, $D=\diag(-2,0,3)$ and $x=(1,0,0)^{\mathsf T}$ give
+$\Delta=-2$ and $M=\diag(0,0,3)$. The old null direction remains, and the
+new one is independent of it. No inverse of $D$ appears anywhere.
+
+\begin{corollary}\label{cor:psd}
+Under the hypotheses of Theorem~\ref{thm:matrix},
+\[
+M\succeq0\quad\Longleftrightarrow\quad
+\begin{cases}
+A\succeq0,&\Delta>0,\\
+n_-(A)=1,&\Delta<0.
+\end{cases}
+\]
+For diagonal $A=D$ in the negative-pivot case, this means exactly one $d_j<0$
+and $d_i\ge0$ for all $i\ne j$.
+\end{corollary}
+\begin{proof}
+A symmetric matrix is positive semidefinite exactly when its negative
+index is zero. Substitute the corresponding negative count
+from~\eqref{eq:inertia}. The eigenvalues of a diagonal matrix are its entries.
+\end{proof}
+
+\begin{corollary}[Nondegenerate block removal]\label{cor:block}
+Let $A$ be real symmetric, $X\in\R^{n\times k}$, and
+$G=X^{\mathsf T}AX$ invertible. Define
+$N=A-AXG^{-1}X^{\mathsf T}A$. Then
+\[
+\In(N)=\bigl(n_+(A)-n_+(G),\ n_-(A)-n_-(G),\ n_0(A)+k\bigr),
+\]
+\[
+\ker N=\ker A\oplus\operatorname{im}X,\qquad
+\rank N=\rank A-k.
+\]
+\end{corollary}
+\begin{proof}
+The matrix $X$ is injective since $G$ is invertible. With
+$H=\ker(X^{\mathsf T}A)$, the identity
+$v=(v-XG^{-1}X^{\mathsf T}Av)+XG^{-1}X^{\mathsf T}Av$
+gives $\R^n=H\oplus\operatorname{im}X$.
+In a basis $P=[Z\ X]$ adapted to this sum,
+$P^{\mathsf T}AP=\diag(Z^{\mathsf T}AZ,G)$ and
+$P^{\mathsf T}NP=\diag(Z^{\mathsf T}AZ,0_k)$.
+Congruence gives the inertia. If $Nv=0$, then
+$v-XG^{-1}X^{\mathsf T}Av\in\ker A$; conversely $N$ kills both
+$\ker A$ and $\operatorname{im}X$. If $Xc\in\ker A$ then $Gc=0$,
+so their intersection is zero. Rank-nullity proves the rank formula.
+\end{proof}
+
+\begin{corollary}[Coefficient changes]\label{cor:coefficient}
+Under Theorem~\ref{thm:matrix}, put $M_t=A-tww^{\mathsf T}/\Delta$.
+Then, componentwise,
+\[
+\In(M_t)=\In(A)-\In([\Delta])+\In([(1-t)\Delta]).
+\]
+Thus $t<1$ preserves inertia, $t=1$ gives~\eqref{eq:inertia},
+and $t>1$ replaces one eigenvalue sign by its opposite without changing nullity.
+\end{corollary}
+\begin{proof}
+The same basis in~\eqref{eq:blocks} gives
+$P^{\mathsf T}M_tP=\diag(C,(1-t)\Delta)$.
+\end{proof}
+
+\section{The continuous-family corollary}
+\begin{theorem}\label{thm:family}
+Let $Y$ be a nonempty connected topological space, and let
+$d,x:Y\to\R^n$ be continuous. For $y\in Y$ define
+\begin{align*}
+D(y)&=\diag(d_1(y),\ldots,d_n(y)),\qquad
+\Delta(y)=x(y)^{\mathsf T}D(y)x(y),\\
+M(y)&=D(y)-\frac{D(y)x(y)x(y)^{\mathsf T}D(y)}{\Delta(y)}.
+\end{align*}
+Suppose $\Delta(y)\ne0$ and $M(y)\succeq0$ for every $y$.
+Then exactly one of the following alternatives holds:
+\begin{enumerate}
+\item $\Delta(y)>0$ and every $d_i(y)\ge0$ for all $y$;
+\item $\Delta(y)<0$ for all $y$, and there is a unique index $j$ such that
+      $d_j(y)<0$ for every $y$ and $d_i(y)\ge0$ for every $i\ne j$ and every $y$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The continuous nonzero function
+$\Delta(y)=\sum_i d_i(y)x_i(y)^2$ has constant sign:
+the inverse images of $(0,\infty)$ and $(-\infty,0)$ are disjoint open
+sets covering $Y$, so connectedness and nonemptiness force exactly one
+to be empty. If the sign is positive, Corollary~\ref{cor:psd} proves (1).
+If negative, that corollary shows that at each point exactly one diagonal
+entry is negative. The sets $U_i=\{y:d_i(y)<0\}$ are open, pairwise
+disjoint, and cover $Y$. Each is also closed because its complement is
+the union of the other $U_i$. A nonempty $U_j$ therefore equals $Y$.
+All other $U_i$ are empty, and the asserted uniqueness follows.
+\end{proof}
+
+\begin{corollary}\label{cor:simplex}
+Let $n\ge3$, let $X$ be homeomorphic to an open $(n-1)$-simplex, and let
+$F\subset X$ be finite. With $Y=X\setminus F$, all conclusions of
+Theorem~\ref{thm:family} hold under its stated continuity, nonzero-pivot
+and positive-semidefiniteness hypotheses.
+\end{corollary}
+\begin{proof}
+Transport $F$ to the finite set $B$ in the convex open simplex
+$S=\{u\in\R^{n-1}:u_i>0,\ \sum_i u_i<1\}$.
+For $p,q\in S\setminus B$, choose $z\in S$ outside the finitely many
+lines through $p,b$ or $q,b$ with $b\in B$.
+Such a $z$ exists: a small circle in a two-dimensional affine plane
+inside $S$ meets each of these lines in at most two points.
+The segments $[p,z]$ and $[z,q]$ stay in $S$ by convexity and avoid $B$
+by the choice of $z$. Thus $S\setminus B$ is path connected and is nonempty
+because $S$ is open and $B$ finite. The homeomorphism transfers these
+properties to $Y$, and Theorem~\ref{thm:family} applies.
+\end{proof}
+
+\begin{corollary}[Countably many punctures]\label{cor:countable}
+Corollary~\ref{cor:simplex} remains true for countable $F$.
+\end{corollary}
+\begin{proof}
+In the preceding argument, the forbidden lines meet a small circle
+in at most countably many points, whereas the circle is uncountable.
+The same choice of $z$ therefore works. The open simplex is uncountable,
+so its complement of a countable set is nonempty.
+\end{proof}
+
+\begin{corollary}[Sharp dimension threshold]\label{cor:sharp}
+The dimension threshold $n\ge3$ in Corollary~\ref{cor:simplex} is sharp
+for a conclusion uniform over all finite deleted sets.
+\end{corollary}
+\begin{proof}
+For $n=2$, let $X=(-1,1)$ and $F=\{0\}$.
+On $y<0$ take $D=\diag(-1,1)$ and $x=(1,0)^{\mathsf T}$;
+on $y>0$ take $D=\diag(1,-1)$ and $x=(0,1)^{\mathsf T}$.
+These functions are continuous on $X\setminus F$, with $\Delta=-1$ and
+$M\succeq0$ everywhere, but the index of the negative diagonal entry switches
+between the two components.
+\end{proof}
+In Theorem~\ref{thm:family} the other, nonnegative entries may vanish.
+
+\section{The linked sphere question}
+Lucid's Mathematics Stack Exchange question 5146381~\cite{otherquestion}
+asks whether, for continuous $h:(0,1]\to\R$ with $h(t)\ge h(1)t>0$,
+the infimum of
+\[
+R_h(x)=\frac{\sum_i x_i h(x_i)}{\sqrt{\sum_i h(x_i)^2}},
+\qquad \sum_i x_i^2=1,
+\]
+can always be reduced to at most two active coordinates.
+We work with strictly positive coordinates and allow their number to vary.
+This is the active-coordinate convention: zero coordinates are omitted.
+The source specifies no $h(0)$; retaining zeros instead requires specifying
+that value. Our polynomial below has $h(0)=0$, so both conventions agree.
+\begin{corollary}[Numerator bound and stationarity]\label{cor:stationarity}
+Under the source's hypotheses, $N:=\sum_i x_i h(x_i)\ge h(1)$.
+If $h$ is differentiable near the active coordinates of a positive unit
+vector with each $x_i<1$, its stationary points satisfy
+\[
+D^2\bigl[h(x_i)+x_i h'(x_i)\bigr]-N h(x_i)h'(x_i)
+=2\lambda x_i D^3,\qquad D:=\sqrt{\sum_j h(x_j)^2}.
+\]
+Continuity alone is insufficient to justify this equation's derivatives.
+\end{corollary}
+\begin{proof}
+The source's termwise proof~\cite{otherquestion} gives
+$N\ge h(1)\sum_i x_i^2=h(1)$.
+Differentiating $N/D$ gives the left side of the displayed equation
+divided by $D^3$; the sphere constraint has gradient $2x\ne0$.
+The Lagrange multiplier condition proves the assertion.
+\end{proof}
+
+Two earlier observations illuminate the general question:
+daw suggested $h(t)=1$ on August 8, 2026~\cite{daw}, and
+Exodd used $h(t)=1/t$ in an answer on August 11~\cite{exodd}.
+\begin{corollary}[Infima for the earlier examples]\label{cor:examples}
+Under the active-coordinate convention, $h=1$ has fixed-dimension
+infimum $1/\sqrt d$, and all-dimension infimum zero, whereas
+dimensions at most two give infimum $1/\sqrt2$.
+For $h(t)=1/t$, the infimum is already zero in dimension two.
+\end{corollary}
+\begin{proof}
+For $h=1$, $R_h(x)=(\sum_i x_i)/\sqrt d\ge1/\sqrt d$,
+and positive vectors approaching $(1,0,\ldots,0)$ give equality
+in the limit. Then let $d\to\infty$.
+For $h(t)=1/t$ in dimension two, put $p=x_1^2$;
+then $R_h(x)^2=4p(1-p)\to0$ as $p\to0$.
+\end{proof}
+
+\begin{theorem}[An increasing odd polynomial]\label{thm:sphere}
+Let $h(t)=(3t-t^3)/2$ on $[0,1]$. It is strictly increasing,
+$h(1)=1$, and $h(t)/t=(3-t^2)/2$ is strictly decreasing for $0<t\le1$.
+Over nonnegative unit vectors of arbitrary finite dimension,
+\begin{equation}\label{eq:sphereinf}
+\inf R_h(x)^2=\frac{16(17-9\sqrt3)}{23}.
+\end{equation}
+The infimum is not attained in a finite dimension. Restricting to at most
+two nonzero coordinates gives the attained minimum $80/81$ instead.
+For example, a vector with squared coordinates $(4/5,1/10,1/10)$ gives
+\[
+R_h(x)^2=\frac{13689}{13885}<\frac{80}{81}.
+\]
+The infimum in~\eqref{eq:sphereinf} is approached by one squared coordinate
+$a_*=6-3\sqrt3$ and $m$ squared coordinates $(1-a_*)/m$ as $m\to\infty$.
+\end{theorem}
+\begin{proof}
+Strict increase follows from $h'(t)=3(1-t^2)/2>0$ for $0\le t<1$.
+Put $p_i=x_i^2$, $s_2=\sum_i p_i^2$, and $s_3=\sum_i p_i^3$.
+Then $\sum_i p_i=1$ and a direct expansion gives
+\begin{equation}\label{eq:moments}
+R_h(x)^2=\frac{(3-s_2)^2}{9-6s_2+s_3}.
+\end{equation}
+If there are at most two positive $p_i$, write them as $p,1-p$,
+allowing endpoints, and put $u=p(1-p)\in[0,1/4]$. Then
+\[
+R_h(x)^2=\frac{(1+u)^2}{1+9u/4},\qquad
+R_h(x)^2-\frac{80}{81}
+=\frac{(9u-1)^2}{81(1+9u/4)}.
+\]
+The value $u=1/9$ is feasible, proving the two-coordinate assertion.
+For the three-coordinate vector,
+\[
+(p_1,p_2,p_3)=(4/5,1/10,1/10),\qquad s_2=33/50,\quad s_3=257/500.
+\]
+Equation~\eqref{eq:moments} gives the displayed counterexample.
+The strict comparison is
+\[
+\frac{80}{81}-\frac{13689}{13885}=\frac{1991}{81\cdot13885}>0.
+\]
+
+For arbitrary dimension, put $a=\sqrt{s_2}\in(0,1]$.
+Since each $p_i\le a$, we have $s_3\le a s_2=a^3$. Thus
+\[
+R_h(x)^2\ge f(a):=\frac{(3-a^2)^2}{9-6a^2+a^3}.
+\]
+The denominator is positive on $[0,1]$, and
+\[
+f'(a)=-\frac{a^2(3-a^2)(a^2-12a+9)}{(9-6a^2+a^3)^2}.
+\]
+It is negative before $a_*=6-3\sqrt3\in(0,1)$ and positive after it.
+Substitution gives $f(a_*)=16(17-9\sqrt3)/23$.
+For the stated sequence,
+$s_2=a_*^2+(1-a_*)^2/m\to a_*^2$ and
+$s_3=a_*^3+(1-a_*)^3/m^2\to a_*^3$, so the lower bound is sharp.
+Equality $s_3=a^3$ in a finite vector forces every positive $p_i=a$.
+Then $s_2=a\sum_i p_i=a$ and $s_2=a^2$, so $a=1$ and $R_h(x)^2=1$.
+Since $f(a_*)<1$, the infimum is not attained.
+\end{proof}
+
+This disproves a universal two-coordinate reduction even for an increasing
+odd polynomial with decreasing $h(t)/t$. It also gives an exact
+one-large-coordinate plus diffuse-tail limit of the kind asked about in
+the source. The broader classification for arbitrary $h$, and the
+source's numerical observation for an unspecified odd polynomial,
+are separate questions.
+
+\section{Source coverage and verification}\label{sec:coverage}
+All mathematical assertions above have written proofs.
+The two pinned Lean sources~\cite{inertialean,familylean} establish the
+following corresponding statements at the commit listed below.
+\begin{flushleft}\small
+\texttt{0f1f822c673c1903dc6b0a209a23dacebca2aa6c}\\
+Common namespace: \texttt{D5.S3.QuadraticForms}\\
+\texttt{I}: \texttt{StructuredRankOneInertia}\\
+\texttt{F}: \texttt{StructuredRankOneFamily}
+\end{flushleft}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.32\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Statement & Lean declaration or written consequence\\
+\midrule
+Both inertia triples, any real symmetric $A$ (hence singular $D$)
+ & \texttt{I.inertia\_downdate}\\
+Kernel and nullity
+ & \texttt{I.kernel\_split}, \texttt{I.nullity\_downdate}\\
+Punctured-simplex path connectedness
+ & \texttt{F.punctured\_simplex\_pathConnected}\\
+Source-domain sign and fixed index
+ & \texttt{F.continuous\_family}\\
+Full conjunction of the two source questions
+ & \texttt{F.mo513954\_revision2}\\
+General connected domain; positive-pivot classification;
+rank identity; $n=2$ counterexample; countable punctures;
+block removal; coefficient changes; sphere results
+ & Written proofs above; finite rational instances in \texttt{verify.py}\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The actual files are linked here:\\
+\href{https://github.com/the-omega-institute/trureturing/blob/0f1f822c673c1903dc6b0a209a23dacebca2aa6c/D5/S3/QuadraticForms/StructuredRankOneInertia.lean}{\texttt{StructuredRankOneInertia.lean}}\\
+\href{https://github.com/the-omega-institute/trureturing/blob/0f1f822c673c1903dc6b0a209a23dacebca2aa6c/D5/S3/QuadraticForms/StructuredRankOneFamily.lean}{\texttt{StructuredRankOneFamily.lean}}.
+The family declaration uses the source's punctured-simplex hypothesis;
+the arbitrary-connected-space formulation is supplied by the written proof.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.53\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+MO 513954 revision 2: both inertia triples; proposed hyperplane proof;
+singular null directions
+ & Proved: Theorem~\ref{thm:matrix}; prior proof cited~\cite{user1551}.\\
+Same revision: nonzero pivot sign; fixed negative coordinate on finite-puncture domain
+ & Proved: Theorem~\ref{thm:family}, Corollary~\ref{cor:simplex}.\\
+Cross-post comment 11110130: can a negative coordinate hand off?
+ & Refuted-and-corrected: its negative-coordinate sets are clopen.\\
+Linked MSE 5146381: two-coordinate reduction under the stated hypotheses,
+including increasing odd polynomials with decreasing $h(t)/t$
+ & Refuted-and-corrected: Theorem~\ref{thm:sphere}.\\
+Same question: a specific diffuse limiting configuration
+ & Proved for $h(t)=(3t-t^3)/2$: Theorem~\ref{thm:sphere}.\\
+Linked discussion: daw's $h=1$ and Exodd's $h=1/t$
+ & Prior examples cited; their infima proved above.\\
+Same question: numerator bound and stationarity equation
+ & Prior proof cited; regularity corrected in Corollary~\ref{cor:stationarity}.\\
+Same question: general classification for $h$ and the author's unspecified polynomial
+ & Not covered.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The accompanying \texttt{verify.py} checks exact rational instances of the
+inertia, kernel-dimension and congruence identities, using symmetric
+elimination rather than approximate eigenvalues. The finite test families
+and parameter ranges are specified in \texttt{verify.py}, and their summary
+counts are recorded in \texttt{verification.json}; these checks illustrate
+the identities and are separate from the proofs for all parameters.
+
+\begin{thebibliography}{9}\raggedright
+\bibitem{lucid} Lucid (MathOverflow user 596445).
+\emph{Inertia of a singular diagonal matrix after a structured rank-one
+downdate}, MathOverflow question 513954, revision 2, August 5, 2026.
+\href{https://mathoverflow.net/revisions/513954/2}{Version-specific source}.
+The source and proposed hyperplane argument are attributed to Lucid;
+the post is licensed CC BY-SA 4.0.
+\bibitem{user1551} user1551.
+Answer to Lucid's \emph{Inertia of a singular diagonal matrix after a
+structured rank-one downdate}, Mathematics Stack Exchange question
+5146335, answer 5146353, August 7, 2026.
+\href{https://math.stackexchange.com/a/5146353}{Original answer},
+licensed CC BY-SA 4.0.
+\bibitem{otherquestion} Lucid (Mathematics Stack Exchange user 1773327).
+\emph{Lower bound for $\langle x,h(x)\rangle/\|h(x)\|_2$ on the unit
+sphere: does it reduce to few active coordinates?}, question 5146381,
+August 7, 2026.
+\href{https://math.stackexchange.com/questions/5146381}{Source question}.
+\bibitem{daw} daw. Comment 11110291 on Lucid's Mathematics Stack Exchange
+question 5146381, August 8, 2026.
+\href{https://math.stackexchange.com/questions/5146381#comment11110291_5146381}{Original comment}.
+The choice $h(t)=1$ is credited to this comment (CC BY-SA 4.0).
+\bibitem{exodd} Exodd. Answer 5146715 to the same question,
+August 11, 2026.
+\href{https://math.stackexchange.com/a/5146715}{Original answer},
+licensed CC BY-SA 4.0. The example $h(t)=1/t$ is credited to this answer.
+\bibitem{inertialean} Trureturing contributors.
+\emph{StructuredRankOneInertia.lean}, commit
+\texttt{0f1f822c673c1903dc6b0a209a23dacebca2aa6c}.
+Pinned source linked in Section~\ref{sec:coverage}.
+\bibitem{familylean} Trureturing contributors.
+\emph{StructuredRankOneFamily.lean}, same commit.
+Pinned source linked in Section~\ref{sec:coverage}.
+\end{thebibliography}
+\end{document}

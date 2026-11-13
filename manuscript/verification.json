@@ -1,0 +1,92 @@
+{
+  "arithmetic": "exact rational",
+  "congruence_transformed_cases": 226,
+  "diagonal_alphabet": [
+    -1,
+    0,
+    1
+  ],
+  "diagonal_cases": [
+    {
+      "checked": 4,
+      "dimension": 1,
+      "negative_pivot": 2,
+      "positive_pivot": 2,
+      "singular": 0,
+      "zero_pivot_omitted": 5
+    },
+    {
+      "checked": 48,
+      "dimension": 2,
+      "negative_pivot": 24,
+      "positive_pivot": 24,
+      "singular": 24,
+      "zero_pivot_omitted": 33
+    },
+    {
+      "checked": 484,
+      "dimension": 3,
+      "negative_pivot": 242,
+      "positive_pivot": 242,
+      "singular": 324,
+      "zero_pivot_omitted": 245
+    },
+    {
+      "checked": 4640,
+      "dimension": 4,
+      "negative_pivot": 2320,
+      "positive_pivot": 2320,
+      "singular": 3648,
+      "zero_pivot_omitted": 1921
+    }
+  ],
+  "diagonal_cases_in_congruence_family": 12,
+  "disconnected_example_algebraic_cases": 2,
+  "genuinely_non_diagonal_cases": 214,
+  "identities": [
+    "inertia",
+    "rank decrease",
+    "kernel direct sum",
+    "new null vector",
+    "invertible hyperplane basis",
+    "two block congruences",
+    "positive-semidefinite classification"
+  ],
+  "scope": "finite instances; general statements have written proofs in note.tex",
+  "sphere_checks": {
+    "all_dimension_infimum_squared": "16*(17-9*sqrt(3))/23",
+    "dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "partition_denominator": 12,
+    "radical_identity_arithmetic": "exact Q(sqrt(3))",
+    "rational_partition_cases": 1024,
+    "three_coordinate_squared_ratio": "13689/13885",
+    "two_coordinate_cases": 101,
+    "two_coordinate_minimum_squared": "80/81"
+  },
+  "supplementary_matrix_checks": {
+    "block_removal_cases": 178,
+    "block_sizes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coefficient_cases": 672,
+    "coefficient_values": [
+      "-2",
+      "0",
+      "1/2",
+      "1",
+      "3/2",
+      "2"
+    ]
+  },
+  "two_by_two_pivot_controls": 2
+}

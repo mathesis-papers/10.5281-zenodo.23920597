@@ -1,0 +1,22 @@
+{
+  "README.md": {
+    "bytes": 6821,
+    "sha256": "3c46096c235d4ac8f8c897ea4f689e9c13cd7aa65d532fe0fdbfbabb56f5a3f8"
+  },
+  "metadata.json": {
+    "bytes": 2042,
+    "sha256": "3d645df070dbb14170beb89ce44d93033914dc4d6d8fd09b794628be687f878a"
+  },
+  "note.tex": {
+    "bytes": 21692,
+    "sha256": "d6ceefc46d435c0270147fc992176bab74720ec42ef91f5056ff242f7132bc89"
+  },
+  "verification.json": {
+    "bytes": 1977,
+    "sha256": "47a4faa66a2645c4843a8c1bc63c0046576479a0d08c286221434437dfcba7c5"
+  },
+  "verify.py": {
+    "bytes": 17563,
+    "sha256": "609a2a9f3a0b8bf1753d827c2cc80e89656b1bb2f184c21bd77744085938f03b"
+  }
+}

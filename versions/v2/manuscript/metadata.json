@@ -1,0 +1,15 @@
+{
+  "id": "mathoverflow-513954-singular-diagonal-downdate-inertia",
+  "revision": 2,
+  "problem_ids": ["mathoverflow-513954-singular-diagonal-downdate-inertia"],
+  "topic": "The inertia and fixed-negative-coordinate questions in MathOverflow 513954, revision 2, with nondegenerate block removal, countable punctures and an exact increasing-polynomial instance of its linked sphere optimization problem.",
+  "title": "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "MathOverflow 513954, revision 2 has affirmative answers: we give a self-contained proof of the inertia formula previously proved by user1551, and prove the continuous-family assertion. For any real symmetric A and nonzero Delta=x^T A x, the matrix A-(Ax)(Ax)^T/Delta loses one eigenvalue of the pivot sign and gains one zero eigenvalue, with kernel ker A direct-sum span{x}. For continuous diagonal families with a positive-semidefinite modification, connectedness fixes the pivot sign and, in the negative branch, one negative coordinate. The conclusions extend to countably punctured simplices, and a block congruence removes any nondegenerate subspace. For the linked sphere question, the increasing odd polynomial h(t)=(3t-t^3)/2 has squared ratio infimum 16(17-9sqrt(3))/23 over all dimensions, strictly below the two-coordinate infimum 80/81.",
+  "summary": "Written proofs of both MathOverflow questions, block and topological corollaries, and the exact all-dimension sphere infimum for h(t)=(3t-t^3)/2; precise pinned Lean-declaration correspondence and exact rational finite checks.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/0f1f822c673c1903dc6b0a209a23dacebca2aa6c/D5/S3/QuadraticForms/StructuredRankOneFamily.lean"
+}
