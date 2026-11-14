@@ -2,12 +2,12 @@
   "schema": "mathesis.materials.v1",
   "work": "mathoverflow-513954-singular-diagonal-downdate-inertia",
   "version": 2,
-  "repository_url": "https://github.com/mathesis-papers/6aec3857f36f82c2025c5d3f",
-  "site_url": "https://papers.trureturing.org/6aec3857f36f82c2025c5d3f/",
+  "repository_url": "https://github.com/mathesis-papers/10.5281-zenodo.23920597",
+  "site_url": "https://papers.trureturing.org/10.5281-zenodo.23920597/",
   "doi": "10.5281/zenodo.23920598",
   "reading": {
-    "en": "https://papers.trureturing.org/6aec3857f36f82c2025c5d3f/en/",
-    "zh": "https://papers.trureturing.org/6aec3857f36f82c2025c5d3f/zh/"
+    "en": "https://papers.trureturing.org/10.5281-zenodo.23920597/en/",
+    "zh": "https://papers.trureturing.org/10.5281-zenodo.23920597/zh/"
   },
   "slides": [],
   "visualizations": []
