@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "11c39653e25956d97833c71c583fba2366b68626",
+    ".mathesis/generated.json": "d948da54b276866542b76cca6c9f3d17d00b0e5a",
     "CHANGELOG.md": "7dcaff5b0798d766b539d2bc5d58614adf8c57c2",
     "CITATION.cff": "24def84a262c9313f11cb933c873bf10a2d793a5",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -14,12 +14,13 @@
     "manuscript/note.tex": "e114424447772bf6aadbffe79ae01d752cd30a7e",
     "manuscript/verification.json": "4607a8c50d0ae80d2407acbe2a24282ed4dc63e2",
     "manuscript/verify.py": "9562d64e10d556ec823e69350d2d6a7c450ca967",
-    "paper.json": "ac3840e34bbcddc13172c6f9b3849213ec7bf31e",
+    "paper.json": "5eee63f4709afef763d1270894721e2ba42e1502",
     "paper.pdf": "646b16d024a074a98659f0157ee8e7629abc32bd",
     "site/en/index.html": "44070854583a4aa476191c9b7bc21ffaf38c0507",
-    "site/index.html": "f7538a373a87cfba1bf2254d0708b61dc660e708",
+    "site/index.html": "3690248a63c36e26d3a59a84a288f441c8766b35",
     "site/mathesis-materials.json": "0cb70271db3ae8e30890b4e20925ad0c66390c55",
     "site/zh/index.html": "ac0b38938556b40771f15d46cedf71441948404c",
+    "source.archive": "025a768b3d471293de4060d6839e1ffa099874d1",
     "versions/v2/.mathesis/generated.json": "fd6cc5c4b1e6145deb0a6d48df108656f37d80ec",
     "versions/v2/CHANGELOG.md": "7dcaff5b0798d766b539d2bc5d58614adf8c57c2",
     "versions/v2/CITATION.cff": "24def84a262c9313f11cb933c873bf10a2d793a5",
@@ -34,12 +35,13 @@
     "versions/v2/manuscript/verification.json": "4607a8c50d0ae80d2407acbe2a24282ed4dc63e2",
     "versions/v2/manuscript/verify.py": "9562d64e10d556ec823e69350d2d6a7c450ca967",
     "versions/v2/paper.json": "f1d8053fdc8914dbd28ba1a15260e70885a7e6af",
-    "versions/v2/paper.pdf": "646b16d024a074a98659f0157ee8e7629abc32bd"
+    "versions/v2/paper.pdf": "646b16d024a074a98659f0157ee8e7629abc32bd",
+    "versions/v2/source.archive": "025a768b3d471293de4060d6839e1ffa099874d1"
   },
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "40199b2a3099835069fd0a0cf35784b93acef6f6022fe60efcd96028d7142aa0",
+    ".mathesis/generated.json": "dbf5ed3fa8f859488117c13c50ad44b359d2922abfeb9c6983dc824b67b9ff5f",
     "CHANGELOG.md": "9dd7fe4f6830002d0492ec4eb127d3d6a3ec395f22e3e2e3ee42b6b93029a41d",
     "CITATION.cff": "83302dd1b10a98f81743b3c84c9bd90c6f86be8e77605b15fe47062cb1e04bb1",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -52,12 +54,13 @@
     "manuscript/note.tex": "d6ceefc46d435c0270147fc992176bab74720ec42ef91f5056ff242f7132bc89",
     "manuscript/verification.json": "47a4faa66a2645c4843a8c1bc63c0046576479a0d08c286221434437dfcba7c5",
     "manuscript/verify.py": "609a2a9f3a0b8bf1753d827c2cc80e89656b1bb2f184c21bd77744085938f03b",
-    "paper.json": "ce7846cf6334e984258d1e5524de4526135bdfbf867d857eb5b3e778c958fb80",
+    "paper.json": "d4b3d00c7eb55b5b8eeb46f889216eda2cc1207060c37249c16c984b150d4cf8",
     "paper.pdf": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5",
     "site/en/index.html": "282e7ced456bc84bee2d8b339fc211b77e76c69b0c76254026f153c8353aa467",
-    "site/index.html": "e3197e6a182e741680d6b74c804f71e009d1e980d02944b037e991e4b03e200a",
+    "site/index.html": "912d36309cca354e0d76cf85f8f5b8c8eecc01a015ae63ef59da4712a12682fb",
     "site/mathesis-materials.json": "da902f2def73afcfe86d439a7c5e3636b03ffc2b6f898caccf023abcdfe1c00e",
     "site/zh/index.html": "46f256631a49626e09c7113f436a8cd73577ebe77b33663af3489cc95a38f224",
+    "source.archive": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24",
     "versions/v2/.mathesis/generated.json": "d52df25b3144a14de773169bba72fc610fc23eb36b7e9a904f9eb8d5a1f3d8d6",
     "versions/v2/CHANGELOG.md": "9dd7fe4f6830002d0492ec4eb127d3d6a3ec395f22e3e2e3ee42b6b93029a41d",
     "versions/v2/CITATION.cff": "83302dd1b10a98f81743b3c84c9bd90c6f86be8e77605b15fe47062cb1e04bb1",
@@ -72,7 +75,8 @@
     "versions/v2/manuscript/verification.json": "47a4faa66a2645c4843a8c1bc63c0046576479a0d08c286221434437dfcba7c5",
     "versions/v2/manuscript/verify.py": "609a2a9f3a0b8bf1753d827c2cc80e89656b1bb2f184c21bd77744085938f03b",
     "versions/v2/paper.json": "9fd6b7f08d882d256e3977da47f84aafca81643958d955fb79024af48ff5af40",
-    "versions/v2/paper.pdf": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5"
+    "versions/v2/paper.pdf": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5",
+    "versions/v2/source.archive": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24"
   },
   "version": 2,
   "work": "mathoverflow-513954-singular-diagonal-downdate-inertia"
