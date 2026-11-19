@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 89479,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5",
       "sha256": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5"
     },
     "source": {
       "bytes": 17687,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24",
       "sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 89479,
+      "sha256": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5",
       "url": "/api/v1/collected-papers/mathoverflow-513954-singular-diagonal-downdate-inertia/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "mathoverflow-513954-singular-diagonal-downdate-inertia",
     "repository_name": "10.5281-zenodo.23920597",
     "source": {
+      "bytes": 17687,
+      "sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24",
       "url": "/api/v1/collected-papers/mathoverflow-513954-singular-diagonal-downdate-inertia/files/source?version=2"
     },
     "title": "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound",
