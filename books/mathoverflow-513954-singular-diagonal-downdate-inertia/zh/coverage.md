@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # 来源、归属与形式覆盖
 
 第二版论文作者为 Haobo Ma（Chrono AI，Singapore）与 Wenlin Zhang（National University of Singapore 及 Chrono AI，Singapore）。精确版本 DOI 为 [10.5281/zenodo.23920598](https://doi.org/10.5281/zenodo.23920598)；[10.5281/zenodo.23920597](https://doi.org/10.5281/zenodo.23920597) 标识版本家族。论文与本讲解采用 CC BY 4.0；原问题、先前回答及关联讨论保留各自的署名和许可。
@@ -55,6 +53,10 @@ Ma 与 Zhang 给出自洽的实对称矩阵证明及核、秩推论，连通族�
 
 矩阵公式要求主元非零，允许矩阵奇异。连通族定理允许其余非负对角元取零。单纯形维数门槛针对删点后结论的统一成立性，不限制秩一矩阵恒等式。多项式构造否定普遍二坐标缩减，并算出该多项式不限维数的精确下确界；它不分类任意连续 $h$，也不确定源问题作者未明确写出的多项式。
 
+<section hidden="hidden">
+
 ```{=typst}
 #pagebreak()
 ```
+
+</section>

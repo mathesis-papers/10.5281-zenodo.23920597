@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # Sources, attribution and formal coverage
 
 Haobo Ma (Chrono AI, Singapore) and Wenlin Zhang (National University of Singapore and Chrono AI, Singapore) are the authors of the version-2 paper. Its exact-version DOI is [10.5281/zenodo.23920598](https://doi.org/10.5281/zenodo.23920598); [10.5281/zenodo.23920597](https://doi.org/10.5281/zenodo.23920597) identifies the version family. The paper and this authored explanation carry CC BY 4.0. The original question, earlier answer and linked discussion retain their own attribution and licences.
@@ -55,6 +53,10 @@ A request is a place to contribute a missing formal statement, not a proof certi
 
 The matrix formula assumes a nonzero pivot and permits singular matrices. The connected-family theorem permits zero values among the other diagonal entries. The simplex dimension threshold concerns uniform survival under punctures, not the rank-one matrix identity. The polynomial construction disproves universal two-coordinate reduction and computes this polynomial's exact all-dimension infimum; it does not classify arbitrary continuous $h$ or identify the source author's unspecified polynomial.
 
+<section hidden="hidden">
+
 ```{=typst}
 #pagebreak()
 ```
+
+</section>
