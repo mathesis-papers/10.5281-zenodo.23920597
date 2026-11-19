@@ -1,0 +1,14 @@
+[site]
+repo = "mathesis-papers/10.5281-zenodo.23920597"
+base_url = "https://papers.trureturing.org/10.5281-zenodo.23920597/"
+post_build = ["python3", "-c", "from pathlib import Path\nimport runpy\nscript = Path(\"docs/layer-mathesis/scripts/site.py\")\nif script.is_file():\n    runpy.run_path(str(script), run_name=\"__main__\")\nelse:\n    print(\"Mathesis post-build skipped: layer script is absent from repository being built\")\n"]
+languages = ["zh", "en"]
+[site.title]
+zh = "MathOverflow 513954，第二版：奇异带符号降秩、固定坐标与尖锐多项式球面界"
+en = "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound"
+[trureturing]
+repo = "the-omega-institute/trureturing"
+branch = "dev"
+[books]
+order = ["mathoverflow-513954-singular-diagonal-downdate-inertia"]
+hide = []

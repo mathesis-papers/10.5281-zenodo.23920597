@@ -1,0 +1,23 @@
+{
+  "schema": "mathesis.collection-history.v1",
+  "sha256": {
+    "versions/v2/.mathesis/generated.json": "d52df25b3144a14de773169bba72fc610fc23eb36b7e9a904f9eb8d5a1f3d8d6",
+    "versions/v2/CHANGELOG.md": "9dd7fe4f6830002d0492ec4eb127d3d6a3ec395f22e3e2e3ee42b6b93029a41d",
+    "versions/v2/CITATION.cff": "83302dd1b10a98f81743b3c84c9bd90c6f86be8e77605b15fe47062cb1e04bb1",
+    "versions/v2/CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "versions/v2/LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "versions/v2/README.md": "775f1694bcc6c929b1dae8a7dcd21dec8cc463234070561220415621433a4334",
+    "versions/v2/formalization/nodes.json": "ce0daa046e8553942552e60b51dda5e3b8413387a73e2be794ac63616d4081cf",
+    "versions/v2/manuscript/README.md": "3c46096c235d4ac8f8c897ea4f689e9c13cd7aa65d532fe0fdbfbabb56f5a3f8",
+    "versions/v2/manuscript/SOURCE-MANIFEST.json": "8d263a64361e1c1bfd3c183b85effd0b369246dffa38b87945b1ef2e5ec7a4e4",
+    "versions/v2/manuscript/metadata.json": "3d645df070dbb14170beb89ce44d93033914dc4d6d8fd09b794628be687f878a",
+    "versions/v2/manuscript/note.tex": "d6ceefc46d435c0270147fc992176bab74720ec42ef91f5056ff242f7132bc89",
+    "versions/v2/manuscript/verification.json": "47a4faa66a2645c4843a8c1bc63c0046576479a0d08c286221434437dfcba7c5",
+    "versions/v2/manuscript/verify.py": "609a2a9f3a0b8bf1753d827c2cc80e89656b1bb2f184c21bd77744085938f03b",
+    "versions/v2/paper.json": "9fd6b7f08d882d256e3977da47f84aafca81643958d955fb79024af48ff5af40",
+    "versions/v2/paper.pdf": "1ff6e176bba5f4a136715d973b1e7aab97d0c722b44ddeba455ea32ecb0f20f5",
+    "versions/v2/source.archive": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24"
+  },
+  "source_commit": "9a48272afb721e7230900679af2071526f082400",
+  "work": "mathoverflow-513954-singular-diagonal-downdate-inertia"
+}

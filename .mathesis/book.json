@@ -1,0 +1,183 @@
+{
+  "book": "mathoverflow-513954-singular-diagonal-downdate-inertia",
+  "pending_claims": [],
+  "results": {
+    "thm-s1": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s1",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Theorem 1",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/169"
+      }
+    },
+    "thm-s2": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s2",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 2",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/170"
+      }
+    },
+    "thm-s3": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s3",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 3",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/171"
+      }
+    },
+    "thm-s4": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s4",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 4",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/172"
+      }
+    },
+    "thm-s5": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s5",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Theorem 5",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/173"
+      }
+    },
+    "thm-s7": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s7",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 7",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/174"
+      }
+    },
+    "thm-s8": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s8",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 8",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/175"
+      }
+    },
+    "thm-s9": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s9",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 9",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/176"
+      }
+    },
+    "thm-s10": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s10",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Corollary 10",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/177"
+      }
+    },
+    "thm-s11": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s11",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md",
+      "formalization_request": {
+        "label": "Theorem 11",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/178"
+      }
+    },
+    "lean-inertia": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s1",
+      "gids": [
+        "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md"
+    },
+    "lean-kernel": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s1",
+      "gids": [
+        "D5/S3/QuadraticForms/StructuredRankOneInertia.kernel_split"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.kernel_split",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md"
+    },
+    "lean-nullity": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s1",
+      "gids": [
+        "D5/S3/QuadraticForms/StructuredRankOneInertia.nullity_downdate"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.nullity_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md"
+    },
+    "lean-path": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s6",
+      "gids": [
+        "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md"
+    },
+    "thm-s6": {
+      "claim": "collected:mathoverflow-513954-singular-diagonal-downdate-inertia:2:s6",
+      "gids": [
+        "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "chapter": "statements.md"
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "zh": "MathOverflow 513954，第二版：奇异带符号降秩、固定坐标与尖锐多项式球面界",
+    "en": "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound"
+  },
+  "version": 2,
+  "work": "mathoverflow-513954-singular-diagonal-downdate-inertia"
+}

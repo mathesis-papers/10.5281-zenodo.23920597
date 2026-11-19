@@ -1,0 +1,209 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{奇异带符号降秩与球面尾部}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}Chrono AI, Singapore \and \inst{2}National University of Singapore, Singapore}
+\date{Version 2}
+\begin{document}
+% Manuscript: Title, authors and affiliation metadata
+\begin{frame}
+\titlepage
+\note{报告从奇异矩阵的具体例子开始，再看连续族与球面尾部。Haobo Ma 的机构只有 Chrono AI；Wenlin Zhang 的机构为 NUS 与 Chrono AI。}
+\end{frame}
+% Manuscript: Sections 1--3
+\begin{frame}{路线}
+\tableofcontents
+\note{第一部分用分块解释惯性；第二部分用连通性锁定指标；第三部分用矩与尾部得到精确下确界。}
+\end{frame}
+\section{矩阵}
+% Manuscript: Section 1, Theorem 1
+\begin{frame}{零方向仍然保留}
+\[
+A=\operatorname{diag}(-2,0,3),\qquad x=(1,0,0)^{\mathsf T}.
+\]
+\[
+\Delta=x^{\mathsf T}Ax=-2,\qquad
+M=A-\frac{(Ax)(Ax)^{\mathsf T}}{\Delta}=\operatorname{diag}(0,0,3).
+\]
+原有零方向仍在；选中方向成为新的零方向。
+\begin{block}{问题与答案}
+奇异输入还能恰好失去一个带符号方向吗？可以：只须二次主元非零。
+\end{block}
+\note{惯性依次计数正、负、零特征值，含重数。本例从 $(1,1,1)$ 变成 $(1,0,2)$。二次量为零不等于属于核；核要求 $Av=0$。全程不求 $A$ 的逆。}
+\end{frame}
+% Manuscript: Section 1, Theorem 1, inertia clauses
+\begin{frame}{两种符号的惯性公式}
+设 $A$ 实对称，$\Delta=x^{\mathsf T}Ax\ne0$，$w=Ax$。
+\begin{bookresult}{lean-inertia}
+对 $M=A-ww^{\mathsf T}/\Delta$，
+\[
+\operatorname{In}(M)=
+\begin{cases}
+(n_+(A)-1,n_-(A),n_0(A)+1),&\Delta>0,\\
+(n_+(A),n_-(A)-1,n_0(A)+1),&\Delta{}<0.
+\end{cases}
+\]
+\end{bookresult}
+其余特征值的数值不一定保持不变。
+\note{此卡精确陈述所钉惯性声明。正主元减去半正定秩一型；负主元则实际加上半正定秩一型。两种情形均允许奇异。问题与超平面论证归于 Lucid，更早的惯性证明归于 user1551。}
+\end{frame}
+% Manuscript: Section 1, proof of Theorem 1
+\begin{frame}{一个块置零}
+令 $H=\{z:(Ax)^{\mathsf T}z=0\}$。因 $(Ax)^{\mathsf T}x=\Delta\ne0$，
+\[
+v=\left(v-\frac{(Ax)^{\mathsf T}v}{\Delta}x\right)
+ +\frac{(Ax)^{\mathsf T}v}{\Delta}x\in H\oplus\operatorname{span}\{x\}.
+\]
+在适配基 $P=[Z\ x]$ 中，
+\[
+P^{\mathsf T}AP=\begin{pmatrix}C&0\\0&\Delta\end{pmatrix},
+\quad
+P^{\mathsf T}MP=\begin{pmatrix}C&0\\0&0\end{pmatrix}.
+\]
+Sylvester 惯性定律保证此可逆变量代换保持惯性。
+\note{超平面垂直于 $Ax$，未必垂直于 $x$。对称性消去交叉项，$C$ 本身也可奇异。正惯性指数是正定子空间的最大维数，所以即使型退化，可逆代换也保持它；负指数对 $-A$ 同理，零指数由总维数得到。}
+\end{frame}
+% Manuscript: Section 1, Theorem 1, kernel and rank clauses
+\begin{frame}{核与秩}
+\begin{bookresult}{lean-kernel}
+\[
+\ker M=\ker A\oplus\operatorname{span}\{x\}.
+\]
+\end{bookresult}
+若 $Mv=0$，令 $t=(Ax)^{\mathsf T}v/\Delta$，则 $A(v-tx)=0$。
+\begin{bookresult}{lean-nullity}
+\[
+\dim\ker M=\dim\ker A+1.
+\]
+\end{bookresult}
+秩与零度定理给出书面推论 $\operatorname{rank}M=\operatorname{rank}A-1$。
+\note{旧核向量与 $Ax$ 的配对因对称性为零，所以仍属于新核；又有 $Mx=0$。若 $tx$ 在旧核，则 $t\Delta=0$，故 $t=0$。这证明直和。两张卡分别引用精确的核、零度声明；秩等式是书面推论。}
+\end{frame}
+% Manuscript: Section 1, Corollary 2
+\begin{frame}{何时得到半正定矩阵？}
+\begin{bookresult}{thm-s2}
+当 $\Delta\ne0$ 时，
+\[
+M\succeq0\iff
+\begin{cases}
+A\succeq0,&\Delta>0,\\
+n_-(A)=1,&\Delta{}<0.
+\end{cases}
+\]
+\end{bookresult}
+对角 $A$ 的负分支：恰有一个负项，其余项非负，允许为零。
+\note{半正定即所有二次量非负，等价于没有负特征值。代入两个负惯性指数公式即可。这是精确惯性定理的书面推论，不是另一条精确的所钉半正定声明。}
+\end{frame}
+\section{连续族}
+% Manuscript: Section 2, Theorem 5
+\begin{frame}{连续性锁定负坐标}
+\begin{bookresult}{thm-s5}
+在非空连通空间上，设 $d,x$ 连续，处处 $\Delta\ne0$、$M\succeq0$。则或者
+\begin{itemize}
+\item 处处 $\Delta>0$ 且所有 $d_i\ge0$；或者
+\item 处处 $\Delta{}<0$，有唯一固定 $j$ 使 $d_j\mathrel{<}0$，其余 $d_i$ 处处非负。
+\end{itemize}
+\end{bookresult}
+负分支的集合 $U_j=\{y:d_j(y)<0\}$ 彼此不交，开且闭，并覆盖全域。
+\note{先用连续非零实函数证明 $\Delta$ 符号固定。负分支由半正定分类知每点恰有一个负项。$U_j$ 因连续性为开，其补集是其余 $U_i$ 的并，所以也闭。连通空间的非空开闭子集必为全域。这是针对任意连通域的书面定理。}
+\end{frame}
+% Manuscript: Section 2, Corollaries 6--8
+\begin{frame}{删点与维数边界}
+\begin{bookresult}{lean-path}
+维数至少二的开单纯形删去有限点后仍非空且道路连通。
+\end{bookresult}
+两段折线路径还可避开可数个删点（书面推广）。
+\[
+\begin{array}{c|c|c}
+y<0&D=\operatorname{diag}(-1,1)&x=(1,0)^{\mathsf T}\\
+y>0&D=\operatorname{diag}(1,-1)&x=(0,1)^{\mathsf T}
+\end{array}
+\]
+在 $(-1,1)\setminus\{0\}$ 上，$\Delta=-1$、$M\succeq0$，负指标却换位。
+\note{选中间点避开各端点与删点确定的所有直线。二维仿射截面内的小圆与每条禁线最多交两点；即使禁线可数，圆的不可数性仍保证可选点。凸性让两段路径留在内部。区间反例的两个结果分别为 $\operatorname{diag}(0,1)$ 与 $\operatorname{diag}(1,0)$；映射在不连通域上连续。}
+\end{frame}
+\section{球面}
+% Manuscript: Section 3, Theorem 11
+\begin{frame}{规则多项式也能击破二坐标约化}
+对 $x_i\ge0$、$\sum_i x_i^2=1$，定义
+\[
+R_h(x)=\frac{\sum_i x_i h(x_i)}{\sqrt{\sum_i h(x_i)^2}},\qquad
+h(t)=\frac{3t-t^3}{2}.
+\]
+$h$ 递增且为奇多项式，$h(1)=1$，而 $h(t)/t$ 递减。
+\begin{bookresult}{thm-s11}
+\[
+\inf_{\text{任意有限维}}R_h^2=\frac{16(17-9\sqrt3)}{23},
+\]
+\[
+\min_{\text{最多两个活跃坐标}}R_h^2=\frac{80}{81}.
+\]
+\end{bookresult}
+\note{因 $x$ 为单位向量，此比值是夹角余弦。源问题的一般函数只在 $(0,1]$ 定义，须省略零坐标；本例 $h(0)=0$，两约定一致。先前常函数例子归 daw，倒数例子归 Exodd。本多项式给出精确分散尾部下确界与有限维不达到性，并不分类所有 $h$。}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 11
+\begin{frame}{矩揭示二坐标差值}
+令 $p_i=x_i^2$、$s_2=\sum_i p_i^2$、$s_3=\sum_i p_i^3$，则
+\[
+R_h^2=\frac{(3-s_2)^2}{9-6s_2+s_3}.
+\]
+对两个平方坐标 $p,1-p$，令 $u=p(1-p)$：
+\[
+R_h^2-\frac{80}{81}=\frac{(9u-1)^2}{81(1+9u/4)}\ge0.
+\]
+但 $(p_1,p_2,p_3)=(4/5,1/10,1/10)$ 给出
+\[
+R_h^2=\frac{13689}{13885}<\frac{80}{81}.
+\]
+\note{平方前分子为 $(3-s_2)/2$，分母平方为 $(9-6s_2+s_3)/4$。二坐标时 $s_2=1-2u$、$s_3=1-3u$，差值在 $u=1/9$ 为零。三坐标例有 $s_2=33/50$、$s_3=257/500$；精确改进量为 $1991/(81\cdot13885)$。}
+\end{frame}
+% Manuscript: Section 3, Theorem 11, lower bound, sharpness and nonattainment
+\begin{frame}{一个大坐标与分散尾部}
+令 $a=\sqrt{s_2}$。因 $p_i\le a$，
+\[
+s_3\le a^3,\qquad R_h^2\ge f(a)=\frac{(3-a^2)^2}{9-6a^2+a^3}.
+\]
+$f$ 唯一最小点为 $a_*=6-3\sqrt3$。
+\[
+p=\left(a_*,\underbrace{\frac{1-a_*}{m},\ldots,\frac{1-a_*}{m}}_{m\text{ 个尾部项}}\right).
+\]
+$m\to\infty$ 时，两矩趋于 $a_*^2,a_*^3$。
+\begin{block}{极限，而非有限维最小向量}
+等号 $s_3=a^3$ 迫使每个正 $p_i=a$，再得 $a^2=a$，故 $a=1$、$R_h^2=1$。
+\end{block}
+\note{求导后，$f$ 在内部的导数符号与 $a^2-12a+9$ 相反，只有 $6-3\sqrt3$ 属于 $(0,1)$。尾部对 $s_2$、$s_3$ 分别贡献 $(1-a_*)^2/m$ 与 $(1-a_*)^3/m^2$。分母极限为正，所以比值收敛。等号分析使用非负项 $p_i^2(a-p_i)$ 的和，也涵盖添加零坐标的情形。}
+\end{frame}
+% Manuscript: Sections 1--4, attribution and coverage
+\begin{frame}{来源与精确证据范围}
+\begin{itemize}
+\item Lucid：原问题与所提超平面证明。
+\item user1551：更早的矩阵惯性证明。
+\item Ma 与 Zhang：自洽证明、连续族推广、精确多项式球面结果。
+\item daw 与 Exodd：先前常函数与倒数例子。
+\end{itemize}
+精确 Lean 卡片覆盖惯性、核、零度与有限删点拓扑。完整秩及半正定推论、一般域推广与球面定理保留书面证明。
+\medskip
+\href{https://doi.org/10.5281/zenodo.23920598}{第二版论文：DOI 10.5281/zenodo.23920598}。\par
+书的来源章链接所钉声明及十个现有形式化请求。
+\note{区分精确的所钉定理、书面推论与更广的推广。原问题域连续族声明也已存在，但正分支未列出全部对角元非负；该项由半正定推论补齐。一般 $h$ 的分类不在本结果之内。}
+\end{frame}
+\appendix
+% Manuscript: Section 1, Corollaries 3 and 4
+\begin{frame}{移除整块；改变系数}
+设 $G=X^{\mathsf T}AX$ 可逆，令 $N=A-AXG^{-1}X^{\mathsf T}A$。
+\begin{bookresult}{thm-s3}
+\[
+\operatorname{In}(N)=\operatorname{In}(A)-(n_+(G),n_-(G),0)+(0,0,k),
+\]
+\[
+\ker N=\ker A\oplus\operatorname{im}X,\quad \operatorname{rank}N=\operatorname{rank}A-k.
+\]
+\end{bookresult}
+\begin{bookresult}{thm-s4}
+对 $M_t=A-tww^{\mathsf T}/\Delta$，将标量块 $[\Delta]$ 换成 $[(1-t)\Delta]$。
+\end{bookresult}
+\note{块移除使用 $H=\ker(X^{\mathsf T}A)$ 与投影 $v\mapsto XG^{-1}X^{\mathsf T}Av$。$G$ 可逆蕴含 $X$ 单射。适配基给出 $C,G$ 与 $C,0_k$ 两组分块。系数变化中，$t<1$ 保持主元符号，$t=1$ 消去，$t>1$ 翻转符号而保持零度。}
+\end{frame}
+% Manuscript: Section 4, exact evidence ledger
+\FormalVerification
+\end{document}

@@ -1,0 +1,30 @@
+{
+  "duration": "3:15",
+  "id": "001-one-direction",
+  "lean": [
+    "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+    "D5/S3/QuadraticForms/StructuredRankOneInertia.kernel_split"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "mathoverflow-513954-singular-diagonal-downdate-inertia_001_cover.jpg",
+    "narrated_720p": "mathoverflow-513954-singular-diagonal-downdate-inertia_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-15",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A singular matrix loses one signed direction; connectedness fixes a negative coordinate; a diffuse tail defeats two-coordinate sphere reduction.",
+  "summary_zh": "奇异矩阵失去一个带符号方向；连通性锁定负坐标；分散尾部击破球面二坐标约化。",
+  "title": "One direction and a diffuse tail",
+  "title_zh": "一个方向与分散的尾部"
+}

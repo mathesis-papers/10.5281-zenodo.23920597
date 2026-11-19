@@ -10,7 +10,8 @@
     "source": {
       "bytes": 17687,
       "matches_public": true,
-      "path": "source.archive",
+      "original_path": "manuscript/original-source.archive",
+      "path": "manuscript/",
       "public_sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24",
       "sha256": "54c90cb282486ee24e36c65945340c9b2f181b483878cf1152044205d858ff24"
     }

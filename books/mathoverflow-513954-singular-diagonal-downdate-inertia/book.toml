@@ -1,0 +1,20 @@
+[book]
+version = "2"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-05"
+[book.title]
+zh = "MathOverflow 513954，第二版：奇异带符号降秩、固定坐标与尖锐多项式球面界"
+en = "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound"
+[book.description]
+zh = "用初等直觉解释一个奇异矩阵的单方向改动、连续族的符号锁定，以及一个分散坐标尾部击破二坐标约化的球面反例。"
+en = "A plain-language guide to a singular matrix downdate, sign locking in continuous families, and a diffuse-coordinate counterexample to two-coordinate sphere reduction."
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "mathoverflow-513954-singular-diagonal-downdate-inertia"
+version = 2
+source_title = "MathOverflow 513954, revision 2: singular signed downdates, fixed coordinates, and a sharp polynomial sphere bound"

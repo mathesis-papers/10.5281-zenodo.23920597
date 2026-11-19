@@ -1,0 +1,49 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+  "pinned_at": "2026-11-15T13:41:31Z",
+  "declarations": {
+    "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family": {
+      "module": "D5/S3/QuadraticForms/StructuredRankOneFamily",
+      "name": "D5.S3.QuadraticForms.StructuredRankOneFamily.continuous_family",
+      "kind": "theorem",
+      "statement_id": "sha256:cb874c2d61d03a0612ccfcb890f5476e3c28f8b7747089bdd77c0930fe0cd9d0",
+      "line": 105,
+      "signature": "theorem continuous_family {n : ℕ} (hn : 3 ≤ n) {X : Type} [TopologicalSpace X] (e : X ≃ₜ openSimplex (n - 1)) (A : Set X) (hA : A.Finite) (d x : ↥(Aᶜ : Set X) → (Fin n → ℝ)) (hd : Continuous d) (hx : Continuous x) (hdelta : ∀ y, pivot (diagonal (d y)) (x y) ≠ 0) (hpsd : ∀ y, (downdate (diagonal (d y)) (x y)).PosSemidef) : Aᶜ.Nonempty ∧ ((∀ y, 0 < pivot (diagonal (d y)) (x y)) ∨ ((∀ y, pivot (diagonal (d y)) (x y) < 0) ∧ ∃! j : Fin n, (∀ y, d y j < 0) ∧ (∀ i, i ≠ j → ∀ y, 0 ≤ d y i)))"
+    },
+    "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected": {
+      "module": "D5/S3/QuadraticForms/StructuredRankOneFamily",
+      "name": "D5.S3.QuadraticForms.StructuredRankOneFamily.punctured_simplex_pathConnected",
+      "kind": "theorem",
+      "statement_id": "sha256:cb874c2d61d03a0612ccfcb890f5476e3c28f8b7747089bdd77c0930fe0cd9d0",
+      "line": 91,
+      "signature": "theorem punctured_simplex_pathConnected {n : ℕ} (hn : 3 ≤ n) {X : Type*} [TopologicalSpace X] (e : X ≃ₜ openSimplex (n - 1)) (A : Set X) (hA : A.Finite) : IsPathConnected Aᶜ"
+    },
+    "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate": {
+      "module": "D5/S3/QuadraticForms/StructuredRankOneInertia",
+      "name": "D5.S3.QuadraticForms.StructuredRankOneInertia.inertia_downdate",
+      "kind": "theorem",
+      "statement_id": "sha256:bbbe8140909f225e3a74fc6e649e71bbb8dddd535d79e0e7feec22b8aeb0e308",
+      "line": 262,
+      "signature": "theorem inertia_downdate (A : Matrix ι ι ℝ) (hA : A.IsHermitian) (x : ι → ℝ) (h : pivot A x ≠ 0) : ∃ hM : (downdate A x).IsHermitian, (0 < pivot A x → posIndex hA = posIndex hM + 1 ∧ negIndex hM = negIndex hA ∧ zeroIndex hM = zeroIndex hA + 1) ∧ (pivot A x < 0 → posIndex hM = posIndex hA ∧ negIndex hA = negIndex hM + 1 ∧ zeroIndex hM = zeroIndex hA + 1)"
+    },
+    "D5/S3/QuadraticForms/StructuredRankOneInertia.kernel_split": {
+      "module": "D5/S3/QuadraticForms/StructuredRankOneInertia",
+      "name": "D5.S3.QuadraticForms.StructuredRankOneInertia.kernel_split",
+      "kind": "theorem",
+      "statement_id": "sha256:bbbe8140909f225e3a74fc6e649e71bbb8dddd535d79e0e7feec22b8aeb0e308",
+      "line": 97,
+      "signature": "theorem kernel_split (A : Matrix ι ι ℝ) (hA : A.IsHermitian) (x : ι → ℝ) (h : pivot A x ≠ 0) : LinearMap.ker (downdate A x).mulVecLin = LinearMap.ker A.mulVecLin ⊔ Submodule.span ℝ {x} ∧ Disjoint (LinearMap.ker A.mulVecLin) (Submodule.span ℝ {x})"
+    },
+    "D5/S3/QuadraticForms/StructuredRankOneInertia.nullity_downdate": {
+      "module": "D5/S3/QuadraticForms/StructuredRankOneInertia",
+      "name": "D5.S3.QuadraticForms.StructuredRankOneInertia.nullity_downdate",
+      "kind": "theorem",
+      "statement_id": "sha256:bbbe8140909f225e3a74fc6e649e71bbb8dddd535d79e0e7feec22b8aeb0e308",
+      "line": 141,
+      "signature": "theorem nullity_downdate (A : Matrix ι ι ℝ) (hA : A.IsHermitian) (x : ι → ℝ) (h : pivot A x ≠ 0) : Module.finrank ℝ (LinearMap.ker (downdate A x).mulVecLin) = Module.finrank ℝ (LinearMap.ker A.mulVecLin) + 1"
+    }
+  }
+}

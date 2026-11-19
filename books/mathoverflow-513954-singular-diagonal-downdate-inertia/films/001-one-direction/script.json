@@ -1,0 +1,167 @@
+{
+  "voice": "af_heart",
+  "speed": 0.94,
+  "say": {},
+  "music": {
+    "bpm": 80,
+    "progression": "a-minor"
+  },
+  "scenes": [
+    {
+      "id": "example",
+      "name": "ONE ZERO MORE",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "Can a matrix with an old zero direction gain exactly one new zero direction?",
+          "已有零方向的矩阵，还能恰好多一个零方向吗？"
+        ],
+        [
+          "Start with diagonal entries minus two, zero, and three. Choose the first coordinate direction.",
+          "从对角元负二、零、三开始，选择第一坐标方向。"
+        ],
+        [
+          "The quadratic pivot is minus two. The structured change turns that first entry into zero, while the old zero survives.",
+          "二次主元为负二；结构改动把第一项变成零，原来的零也保留。"
+        ]
+      ]
+    },
+    {
+      "id": "blocks",
+      "name": "ISOLATE THE PIVOT",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "The general mechanism is to isolate a scalar block. The original matrix may be singular.",
+          "一般机制是隔离一个标量块，原矩阵可以奇异。"
+        ],
+        [
+          "Split every vector into a part perpendicular to A x, and a part along x. A nonzero pivot makes this split unique.",
+          "把向量拆成垂直于 A x 的部分与沿 x 的部分；主元非零使拆分唯一。"
+        ],
+        [
+          "In these coordinates the matrix has blocks C and delta. The changed matrix has blocks C and zero.",
+          "在这些坐标中，原矩阵的块为 C 与 delta，改动后的块为 C 与零。"
+        ],
+        [
+          "A positive pivot removes one positive direction; a negative pivot removes one negative direction.",
+          "正主元移去一个正方向，负主元移去一个负方向。"
+        ]
+      ]
+    },
+    {
+      "id": "kernel",
+      "name": "OLD KERNEL PLUS ONE LINE",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "The exact kernel is the old kernel plus the line through x, with zero intersection.",
+          "精确的新核是旧核与 x 直线的直和，交集为零。"
+        ],
+        [
+          "If the changed matrix kills v, subtract a suitable multiple of x. What remains lies in the old kernel.",
+          "若改动后的矩阵消去 v，减去适当倍数的 x，余下部分就在旧核中。"
+        ],
+        [
+          "Thus nullity rises by one and rank falls by one. No inverse of the original matrix is required.",
+          "所以零度增加一，秩减少一；无须原矩阵的逆。"
+        ]
+      ]
+    },
+    {
+      "id": "family",
+      "name": "CONNECTEDNESS FIXES THE INDEX",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "Now vary a diagonal matrix continuously, keeping the pivot nonzero and the changed matrix positive semidefinite.",
+          "让对角矩阵连续变化，始终保持主元非零，改动后的矩阵半正定。"
+        ],
+        [
+          "On a connected domain the pivot keeps one sign. In the negative branch, exactly one diagonal entry is negative at every point.",
+          "在连通域上主元符号固定；负分支中每点恰有一个负对角元。"
+        ],
+        [
+          "The regions where each coordinate is negative are disjoint, open, and closed. Connectedness forces one region to be the whole domain.",
+          "各坐标为负的区域彼此不交，既开又闭；连通性迫使其中一个就是全域。"
+        ],
+        [
+          "Punctured simplices of dimension at least two stay connected after countably many punctures. A punctured interval can disconnect.",
+          "维数至少二的开单纯形删去可数点后仍连通；区间删去一点却可能断开。"
+        ]
+      ]
+    },
+    {
+      "id": "sphere",
+      "name": "TWO COORDINATES ARE NOT ENOUGH",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "A linked sphere question asks whether the smallest alignment ratio always needs at most two active coordinates.",
+          "关联球面问题问：最小对齐比值是否总只需两个活跃坐标？"
+        ],
+        [
+          "Use the increasing odd polynomial h of t equals three t minus t cubed, divided by two.",
+          "取递增奇多项式 h：三倍 t 减 t 的立方，再除以二。"
+        ],
+        [
+          "Write p for squared coordinates. Two coordinates have exact squared minimum eighty over eighty-one.",
+          "用 p 表示平方坐标；两个坐标的比值平方最小值精确为八十除以八十一。"
+        ],
+        [
+          "But squared coordinates four fifths, one tenth, one tenth give a strictly smaller value. Three coordinates beat every two-coordinate vector.",
+          "但平方坐标五分之四、十分之一、十分之一给出更小值；三个坐标胜过所有二坐标向量。"
+        ]
+      ]
+    },
+    {
+      "id": "tail",
+      "name": "ONE LARGE COORDINATE, MANY SMALL ONES",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "The moments give a uniform lower bound. Put a equal to the square root of the second moment; the third moment is at most a cubed.",
+          "矩给出统一下界；令 a 为二阶矩的平方根，三阶矩不超过 a 的立方。"
+        ],
+        [
+          "A one-variable minimum occurs at a star equals six minus three times the square root of three.",
+          "一元最小值在 a 星等于六减三倍根号三处取得。"
+        ],
+        [
+          "Keep one squared coordinate at a star, and spread the remaining mass equally over more and more coordinates.",
+          "固定一个平方坐标为 a 星，将余下质量均分给越来越多的坐标。"
+        ],
+        [
+          "The tail moments vanish, and the ratio approaches the sharp infimum. No finite vector attains it.",
+          "尾部的矩趋于零，比值逼近尖锐下确界，但没有有限向量达到它。"
+        ]
+      ]
+    },
+    {
+      "id": "close",
+      "name": "SOURCES AND SCOPE",
+      "lead": 1.0,
+      "tail": 0.8,
+      "lines": [
+        [
+          "Lucid posed the questions, and user fifteen fifty-one gave the earlier inertia proof.",
+          "问题由 Lucid 提出，更早的惯性证明归于 user1551。"
+        ],
+        [
+          "Haobo Ma and Wenlin Zhang give the self-contained proof, family extensions, and exact polynomial bound.",
+          "Haobo Ma 与 Wenlin Zhang 给出自洽证明、连续族推广与精确多项式界。"
+        ],
+        [
+          "The book links exact Lean declarations for the matrix statements, and complete written proofs for the broader results.",
+          "书中链接矩阵结论的精确 Lean 声明，并完整给出更广结论的书面证明。"
+        ]
+      ]
+    }
+  ]
+}

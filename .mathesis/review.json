@@ -1,0 +1,94 @@
+{
+  "results": {
+    "thm-s1": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "The compared declaration covers the full inertia substatement for arbitrary symmetric A. kernel_split and nullity_downdate cover other clauses; rank is a written rank-nullity deduction. The complete bundled result is not one exact declaration."
+    },
+    "thm-s2": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Inertia supplies the prerequisite. The two-branch PSD equivalence and diagonal-entry interpretation are written consequences, not this declaration."
+    },
+    "thm-s3": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "The public rank-one statement is the k=1 special case of nondegenerate block removal; the block inertia/kernel/rank conjunction is written."
+    },
+    "thm-s4": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "The public declaration is the t=1 case; the all-real-t coefficient identity is written."
+    },
+    "thm-s5": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "The public declaration restricts the domain to a finitely punctured simplex and omits entrywise nonnegativity in the positive branch. The nonempty arbitrary-connected-domain theorem is written."
+    },
+    "thm-s7": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "The public theorem states finite deletion; countable deletion and application to the full family conclusion are written."
+    },
+    "thm-s8": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Explicit disconnected n=2 counterexample and sharp uniform dimension threshold have no matching declaration in the two inspected modules."
+    },
+    "thm-s9": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "General-h numerator bound and differentiability-qualified stationarity equation have no matching declaration in the two inspected modules."
+    },
+    "thm-s10": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Infima for the attributed constant and reciprocal examples have no matching declaration in the two inspected modules."
+    },
+    "thm-s11": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Polynomial moment identity, exact two-coordinate gap, three-coordinate witness, dimension-free infimum, diffuse-tail limit and nonattainment have no matching declaration in the two inspected modules."
+    },
+    "lean-inertia": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.inertia_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Both signed inertia formulas exactly as stated in the supplied pinned source; its relationship to the full source claim is explicit in statements.md."
+    },
+    "lean-kernel": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.kernel_split",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Exact kernel split exactly as stated in the supplied pinned source; its relationship to the full source claim is explicit in statements.md."
+    },
+    "lean-nullity": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneInertia.nullity_downdate",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Exact nullity increase exactly as stated in the supplied pinned source; its relationship to the full source claim is explicit in statements.md."
+    },
+    "lean-path": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.punctured_simplex_pathConnected",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Finite-puncture path connectedness exactly as stated in the supplied pinned source; its relationship to the full source claim is explicit in statements.md."
+    },
+    "thm-s6": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/QuadraticForms/StructuredRankOneFamily.continuous_family",
+      "comparison_commit": "0f1f822c673c1903dc6b0a209a23dacebca2aa6c",
+      "scope": "Exact finite-puncture source-domain sign/fixed-negative-index substatement; positive branch asserts pivot positivity, with the entrywise classification supplied by the written PSD corollary."
+    }
+  }
+}

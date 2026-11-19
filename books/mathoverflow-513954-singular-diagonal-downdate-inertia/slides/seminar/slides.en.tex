@@ -1,0 +1,209 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Singular signed downdates and diffuse sphere tails}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}Chrono AI, Singapore \and \inst{2}National University of Singapore, Singapore}
+\date{Version 2}
+\begin{document}
+% Manuscript: Title, authors and affiliation metadata
+\begin{frame}
+\titlepage
+\note{Start with a singular matrix example, then connected families and sphere tails. Haobo Ma is affiliated with Chrono AI; Wenlin Zhang with NUS and Chrono AI.}
+\end{frame}
+% Manuscript: Sections 1--3
+\begin{frame}{Route}
+\tableofcontents
+\note{The matrix part isolates a block; the family part uses connectedness; the sphere part uses moments and a diffuse tail.}
+\end{frame}
+\section{Matrices}
+% Manuscript: Section 1, Theorem 1
+\begin{frame}{A zero direction survives}
+\[
+A=\operatorname{diag}(-2,0,3),\qquad x=(1,0,0)^{\mathsf T}.
+\]
+\[
+\Delta=x^{\mathsf T}Ax=-2,\qquad
+M=A-\frac{(Ax)(Ax)^{\mathsf T}}{\Delta}=\operatorname{diag}(0,0,3).
+\]
+The old zero direction survives; the chosen direction becomes a new one.
+\begin{block}{Question and answer}
+Can singular input still lose exactly one signed direction? Yes: a nonzero quadratic pivot is enough.
+\end{block}
+\note{Inertia counts positive, negative and zero eigenvalues with multiplicity. Here it changes from $(1,1,1)$ to $(1,0,2)$. A vector of zero quadratic value need not lie in the kernel; the kernel requires $Av=0$. No inverse of $A$ is used.}
+\end{frame}
+% Manuscript: Section 1, Theorem 1, inertia clauses
+\begin{frame}{The two signed inertia formulas}
+Let $A$ be real symmetric, $\Delta=x^{\mathsf T}Ax\ne0$, $w=Ax$.
+\begin{bookresult}{lean-inertia}
+For $M=A-ww^{\mathsf T}/\Delta$,
+\[
+\operatorname{In}(M)=
+\begin{cases}
+(n_+(A)-1,n_-(A),n_0(A)+1),&\Delta>0,\\
+(n_+(A),n_-(A)-1,n_0(A)+1),&\Delta{}<0.
+\end{cases}
+\]
+\end{bookresult}
+The remaining eigenvalues need not retain their numerical values.
+\note{This card states precisely the pinned inertia declaration. Positive pivot means subtraction of a positive rank-one form; negative pivot makes the formula a positive rank-one update. Singularity is allowed in both branches. Attribute the question and proposed hyperplane argument to Lucid, and the earlier inertia proof to user1551.}
+\end{frame}
+% Manuscript: Section 1, proof of Theorem 1
+\begin{frame}{One block becomes zero}
+Put $H=\{z:(Ax)^{\mathsf T}z=0\}$. Since $(Ax)^{\mathsf T}x=\Delta\ne0$,
+\[
+v=\left(v-\frac{(Ax)^{\mathsf T}v}{\Delta}x\right)
+ +\frac{(Ax)^{\mathsf T}v}{\Delta}x\in H\oplus\operatorname{span}\{x\}.
+\]
+In a basis $P=[Z\ x]$ adapted to this sum,
+\[
+P^{\mathsf T}AP=\begin{pmatrix}C&0\\0&\Delta\end{pmatrix},
+\quad
+P^{\mathsf T}MP=\begin{pmatrix}C&0\\0&0\end{pmatrix}.
+\]
+Sylvester's law preserves inertia under this invertible substitution.
+\note{The hyperplane is perpendicular to $Ax$, not generally to $x$. Symmetry kills the cross terms. $C$ can itself be singular. Positive index is the maximal dimension of a positive-definite subspace, so invertible substitutions preserve it even for singular forms; use $-A$ for the negative index and dimension for the zero index.}
+\end{frame}
+% Manuscript: Section 1, Theorem 1, kernel and rank clauses
+\begin{frame}{Kernel and rank}
+\begin{bookresult}{lean-kernel}
+\[
+\ker M=\ker A\oplus\operatorname{span}\{x\}.
+\]
+\end{bookresult}
+If $Mv=0$, put $t=(Ax)^{\mathsf T}v/\Delta$; then $A(v-tx)=0$.
+\begin{bookresult}{lean-nullity}
+\[
+\dim\ker M=\dim\ker A+1.
+\]
+\end{bookresult}
+Rank-nullity gives the written consequence $\operatorname{rank}M=\operatorname{rank}A-1$.
+\note{Every old kernel vector remains in the kernel because symmetry makes its pairing with $Ax$ vanish. Also $Mx=0$. If $tx$ lies in the old kernel, then $t\Delta=0$, hence $t=0$. These facts prove the direct sum. The two cards cite exact kernel and nullity declarations; the rank equality is a written deduction.}
+\end{frame}
+% Manuscript: Section 1, Corollary 2
+\begin{frame}{When is the result positive semidefinite?}
+\begin{bookresult}{thm-s2}
+With $\Delta\ne0$,
+\[
+M\succeq0\iff
+\begin{cases}
+A\succeq0,&\Delta>0,\\
+n_-(A)=1,&\Delta{}<0.
+\end{cases}
+\]
+\end{bookresult}
+For diagonal $A$ in the negative branch: exactly one negative entry, and every other entry nonnegative. Zeros are permitted.
+\note{Positive semidefinite means every quadratic value is nonnegative, equivalently no negative eigenvalues. Insert the two negative-index formulas. This is a written consequence of the exact inertia theorem; it is not a separate exact pinned PSD declaration.}
+\end{frame}
+\section{Families}
+% Manuscript: Section 2, Theorem 5
+\begin{frame}{Continuity fixes the negative coordinate}
+\begin{bookresult}{thm-s5}
+On a nonempty connected space, let $d,x$ be continuous and suppose $\Delta\ne0$, $M\succeq0$ everywhere. Then either
+\begin{itemize}
+\item $\Delta>0$ everywhere and all $d_i\ge0$; or
+\item $\Delta{}<0$ everywhere and one unique fixed $j$ has $d_j\mathrel{<}0$, all other $d_i\ge0$ everywhere.
+\end{itemize}
+\end{bookresult}
+The sets $U_j=\{y:d_j(y)<0\}$ are disjoint, open and closed, and cover the negative branch.
+\note{First the continuous nonzero scalar $\Delta$ has a fixed sign. In the negative branch the PSD classification gives one negative entry at each point. Each $U_j$ is open by continuity and closed because its complement is the union of the other $U_i$. A nonempty clopen subset of a connected space is the whole space. This is a written theorem for arbitrary connected domains.}
+\end{frame}
+% Manuscript: Section 2, Corollaries 6--8
+\begin{frame}{Punctures and the dimension boundary}
+\begin{bookresult}{lean-path}
+An open simplex of dimension at least two remains nonempty and path connected after finitely many punctures.
+\end{bookresult}
+The two-segment path argument also avoids countably many punctures (written extension).
+\[
+\begin{array}{c|c|c}
+y<0&D=\operatorname{diag}(-1,1)&x=(1,0)^{\mathsf T}\\
+y>0&D=\operatorname{diag}(1,-1)&x=(0,1)^{\mathsf T}
+\end{array}
+\]
+On $(-1,1)\setminus\{0\}$, $\Delta=-1$ and $M\succeq0$, but the negative index switches.
+\note{Choose an intermediate point off the lines through either endpoint and each deleted point. A small circle inside a two-dimensional affine slice meets each forbidden line at most twice, and uncountability leaves a choice even for countably many lines. Convexity keeps both segments inside. In the interval example the two resulting matrices are $\operatorname{diag}(0,1)$ and $\operatorname{diag}(1,0)$. The example is continuous on its disconnected domain.}
+\end{frame}
+\section{Sphere}
+% Manuscript: Section 3, Theorem 11
+\begin{frame}{A regular polynomial can defeat two coordinates}
+For $x_i\ge0$, $\sum_i x_i^2=1$, define
+\[
+R_h(x)=\frac{\sum_i x_i h(x_i)}{\sqrt{\sum_i h(x_i)^2}},\qquad
+h(t)=\frac{3t-t^3}{2}.
+\]
+$h$ is increasing and odd, $h(1)=1$, and $h(t)/t$ decreases.
+\begin{bookresult}{thm-s11}
+\[
+\inf_{\text{all finite dimensions}}R_h^2=\frac{16(17-9\sqrt3)}{23},
+\]
+\[
+\min_{\text{at most two active coordinates}}R_h^2=\frac{80}{81}.
+\]
+\end{bookresult}
+\note{The ratio is a cosine because $x$ has length one. General source functions are defined only on $(0,1]$, so zero coordinates are omitted; here $h(0)=0$, and both conventions agree. daw supplied the earlier constant example, Exodd the reciprocal example. The paper's polynomial gives an exact diffuse-tail infimum and finite-dimensional nonattainment, not a classification for every $h$.}
+\end{frame}
+% Manuscript: Section 3, proof of Theorem 11
+\begin{frame}{Moments reveal the two-coordinate gap}
+Put $p_i=x_i^2$, $s_2=\sum_i p_i^2$, $s_3=\sum_i p_i^3$. Then
+\[
+R_h^2=\frac{(3-s_2)^2}{9-6s_2+s_3}.
+\]
+With two squared coordinates $p,1-p$, put $u=p(1-p)$:
+\[
+R_h^2-\frac{80}{81}=\frac{(9u-1)^2}{81(1+9u/4)}\ge0.
+\]
+But $(p_1,p_2,p_3)=(4/5,1/10,1/10)$ gives
+\[
+R_h^2=\frac{13689}{13885}<\frac{80}{81}.
+\]
+\note{The numerator before squaring is $(3-s_2)/2$; the squared denominator is $(9-6s_2+s_3)/4$. For two coordinates $s_2=1-2u$, $s_3=1-3u$, and equality in the gap holds at $u=1/9$. The example has $s_2=33/50$ and $s_3=257/500$; the exact improvement is $1991/(81\cdot13885)$.}
+\end{frame}
+% Manuscript: Section 3, Theorem 11, lower bound, sharpness and nonattainment
+\begin{frame}{One large coordinate and a diffuse tail}
+Let $a=\sqrt{s_2}$. Since $p_i\le a$,
+\[
+s_3\le a^3,\qquad R_h^2\ge f(a)=\frac{(3-a^2)^2}{9-6a^2+a^3}.
+\]
+$f$ has its unique minimum at $a_*=6-3\sqrt3$.
+\[
+p=\left(a_*,\underbrace{\frac{1-a_*}{m},\ldots,\frac{1-a_*}{m}}_{m\text{ tail entries}}\right).
+\]
+Its moments tend to $a_*^2,a_*^3$ as $m\to\infty$.
+\begin{block}{A limit, not a finite minimizer}
+Equality $s_3=a^3$ forces every positive $p_i=a$, then $a^2=a$, hence $a=1$ and $R_h^2=1$.
+\end{block}
+\note{Differentiate $f$: its sign is the opposite of $a^2-12a+9$ in the interior. Only $6-3\sqrt3$ lies in $(0,1)$. The tail contributes $(1-a_*)^2/m$ to $s_2$ and $(1-a_*)^3/m^2$ to $s_3$. The denominator has a positive limit, so the ratio converges. For equality, sum the nonnegative terms $p_i^2(a-p_i)$. This also handles appended zero coordinates.}
+\end{frame}
+% Manuscript: Sections 1--4, attribution and coverage
+\begin{frame}{Sources and exact evidence scope}
+\begin{itemize}
+\item Lucid: original question and proposed hyperplane proof.
+\item user1551: earlier matrix inertia proof.
+\item Ma and Zhang: self-contained proof, family extensions, exact polynomial sphere result.
+\item daw and Exodd: earlier constant and reciprocal examples.
+\end{itemize}
+Exact Lean cards: inertia, kernel, nullity and finite-puncture topology. The full rank/PSD consequences, general-domain extensions and sphere theorem retain their written proofs.
+\medskip
+\href{https://doi.org/10.5281/zenodo.23920598}{Version-2 paper: DOI 10.5281/zenodo.23920598}.\par
+The book's sources chapter links the pinned declarations and ten existing formalization requests.
+\note{Distinguish an exact pinned theorem from a written consequence and from a broader extension. The source-domain family declaration also exists, but its positive branch does not list all diagonal entries as nonnegative. That extra clause is supplied by the PSD deduction. The general classification for $h$ remains outside this result.}
+\end{frame}
+\appendix
+% Manuscript: Section 1, Corollaries 3 and 4
+\begin{frame}{Removing a whole block; changing a coefficient}
+For $G=X^{\mathsf T}AX$ invertible, put $N=A-AXG^{-1}X^{\mathsf T}A$.
+\begin{bookresult}{thm-s3}
+\[
+\operatorname{In}(N)=\operatorname{In}(A)-(n_+(G),n_-(G),0)+(0,0,k),
+\]
+\[
+\ker N=\ker A\oplus\operatorname{im}X,\quad \operatorname{rank}N=\operatorname{rank}A-k.
+\]
+\end{bookresult}
+\begin{bookresult}{thm-s4}
+For $M_t=A-tww^{\mathsf T}/\Delta$, replace the scalar block $[\Delta]$ by $[(1-t)\Delta]$.
+\end{bookresult}
+\note{For block removal use $H=\ker(X^{\mathsf T}A)$ and the projection $v\mapsto XG^{-1}X^{\mathsf T}Av$. Injectivity of $X$ follows from invertibility of $G$. The adapted basis gives blocks $C,G$ and $C,0_k$. For coefficient changes, $t<1$ preserves the pivot sign, $t=1$ removes it, and $t>1$ reverses it without changing nullity.}
+\end{frame}
+% Manuscript: Section 4, exact evidence ledger
+\FormalVerification
+\end{document}
